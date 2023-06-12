@@ -1,0 +1,117 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header {
+    /* background-image: url("cv2.jpg"); */
+    height: 50px;
+    color: black;
+    text-align: center;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 5px black;
+    line-height: 50px;
+
+}
+
+
+header h1 {
+    text-shadow: 5px 5px 5px white;
+
+}
+
+.divPCV {
+    margin: 20px;
+    padding: 20px;
+}
+
+.divPCV img {
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+    margin-bottom: 50px;
+}
+
+
+section p {
+    font-size: 30px;
+    text-align: justify;
+    
+}
+
+section h2 {
+    font-size: 40px;
+    text-align: center;
+	font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section ul {
+    margin: 20px;
+    font-size: 30px;
+
+}
+
+section button {
+    border-radius: 30px;
+    background-color: purple;
+    margin: auto;
+    display: block;
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+section button:hover {
+    background-color: white;
+    color: purple;
+
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/*****************************************************
+                MEDIA QUERIE PHONE
+ ******************************************************/
+
+ @media screen and (max-width: 901px) {
+
+    .divPCV img {
+        width: 100%;
+    }
+    
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    section p {
+        font-size: 20px;
+        
+    }
+    
+    section ul {
+        font-size: 20px;
+    
+    }
+    
+    
+    
+    
+  
+
+
+}

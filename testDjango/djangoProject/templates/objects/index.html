@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header %}
+{% include "navbar.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="super-title">
+<marquee behavior="" direction="right">
+  <h1>Bienvenue sur RECOVA</h1>
+</marquee>
+<!-- <hr> -->
+
+<!-- <h2>Avec RECOVA rien de se perd</h2> -->
+<h2>RECOVA vous permet de retrouver tous ce que vous recherchez étant chez vous et sans éffort !</h2>
+</div>
+<!-- <hr> -->
+<div class="after-title">
+  <div class="div-texte">
+    <p>'' Vous avez retrouvé une Carte Nationale d'Identité, un passport, Un permis de conduite, un acte de naissance ou
+      bien un enfant égaré ? Vous êtes au bon endroit, RECOVA collecte quotidiennement des milliers d'éléments perdus !
+    </p>
+    <!-- Il vous suffit d'enregistrer l'élément et vous serrez recompensé lorsque le propriétaire entrera en possession. '' -->
+
+  </div>
+  <div class="slideshow">
+
+    {% for row in slider %}
+    <img src="{{ row.image.url }}" alt="Image indisponible">
+    {% endfor %}
+
+  </div>
+</div>
+<hr>
+<div class="head-img">
+  <h1>Installez notre application mobile RECOVA sur AppStore et PlayStore !</h1>
+  <img src="{% static 'site-ebs/Realistic.png' %}" alt="">
+  <div class="stores">
+    <a class="app-store" href="#"><img crossorigin="anonymous" src="https://images.app.goo.gl/Rabao9yBTCN1xBRX9" alt="">
+      <h2>AppStore</h2></a>
+    <a class="play-store" href="#"><img crossorigin="anonymous" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.citypng.com%2Fpublic%2Fuploads%2Fpreview%2Fpng-white-google-play-playstore-logo-symbol-icon-11639742441dhglfjnad1.png&tbnid=cEg82_zzRZz0_M&vet=12ahUKEwi7stvpz6n_AhU9EGIAHZwIDqsQMygqegUIARCZAg..i&imgrefurl=https%3A%2F%2Fwww.citypng.com%2Fphoto%2F20836%2Fpng-white-google-play-playstore-logo-symbol-icon&docid=DMbgC54x-T6KwM&w=480&h=480&q=logo%20playstore%20png%20transparent&client=safari&ved=2ahUKEwi7stvpz6n_AhU9EGIAHZwIDqsQMygqegUIARCZAg" alt="">
+      <h2>PlayStore</h2></a>
+  </div>
+</div>
+
+ 
+<div class="display-on-scroll">
+
+  {% for row in slider %}
+  <!-- <img src="{{ row.image.url }}" alt="Image indisponible"> -->
+  <figure>
+    <img src="{{ row.image.url }}" alt="Image indisponible" width="50%">
+  </figure>
+  {% endfor %}
+
+</div>
+
+<div class="display-on-scroll">
+<figure>
+  <img id="im" src="{{ slider.0.image.url }}" alt="Image indisponible" width="50%">
+</figure>
+</div>
+
+
+
+
+{% endblock content %}

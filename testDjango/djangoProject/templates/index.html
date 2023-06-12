@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load myfilter %}
+
+{% block header %}
+{% include "navbar.html" %}
+{% endblock %}
+
+{% block content %}
+
+Ca c'est le contenu
+
+{% endblock %}
+
+
+{% block h2 %}
+Voici le contenu en h2
+
+{{ maliste }}
+{% endblock %}
+
+
+{% block liste %}
+
+
+{% for element in maliste %}
+<li> {{ element|addcent }} ---- {{ nom|couper:"m"|majuscule }}</li>
+{% empty %}
+<h3> Liste vide </h3>
+{% endfor %}
+
+{% endblock %}
+
+
+
+{% block filter %}
+
+{% endblock %}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+<head>
+    <title>IT Service</title>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'site-ebs/style.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <script src="{% static 'site-ebs/script.js' %}"></script>
+
+</head>
+
+<body>
+
+    <!-- L'ENTÊTE -->
+
+    <header>
+        <!-- <h1>IT Service</h1> -->
+        <div class="slideshow">
+
+            {% for image in images %}
+            <img src="{{ image.get_absolute_url }}" alt="Image indisponible">
+
+            {% endfor %}
+
+            {% comment %} <img src="{% static 'site-ebs/header-bg/IMG_7972.JPG' %}" alt="Image indisponible">
+            <img src="{% static 'site-ebs/header-bg/Background.jpg' %}" alt="Image indisponible">
+            <img src="{% static 'site-ebs/bp/bp1.JPG' %}" alt="Image indisponible">
+            <img src="{% static 'site-ebs/header-bg/IMG_8105.JPG' %}" alt="Image indisponible">
+            <img src="{% static 'site-ebs/header-bg/IMG_8106.JPG' %}" alt="Image indisponible">
+            <img src="{% static 'site-ebs/bp/bp2.JPG' %}" alt="Image indisponible">
+            <img src="{% static 'site-ebs/sw/SWI1.JPG' %}" alt="Image indisponible"> {% endcomment %}
+        </div>
+
+        <div class="logo">
+            <img src="logo/IMG_4197.jpg" alt="">
+        </div>
+
+        <!-- <marquee>
+            <p>INNOVATION - TRAVAIL - CRÉATIVITÉ</p>
+        </marquee> -->
+        <!-- <img src="logo/IMG_4197.jpg" alt=""> -->
+        <h2>INNOVATION - TRAVAIL - CRÉATIVITÉ</h2>
+        <span>
+            <p>INNOVATION - TRAVAIL - CRÉATIVITÉ</p>
+        </span>
+    </header>
+
+    <!-- LA NAVIGATION -->
+
+    <nav>
+        <label for="nav-mobile" class="nav-mobile">&#9776;</label>
+        <input type="checkbox" id="nav-mobile" />
+        <ul>
+            <li><a class="nav-item" id="accueil">Accueil</a></li>
+            <li><a class="nav-item" id="services">Nos services</a></li>
+            <li><a class="nav-item" id="qui-sommes-nous">Qui sommes-nous ?</a></li>
+        </ul>
+    </nav>
+
+    <!-- LE CONTENU DE LA PAGE -->
+    <div class="acueil-page">
+        <div class="divPrincipale" id="divPrincipale">
+            <section>
+                <h1>Pourquoi vous devez avoir un CV professionnel ?</h1><br />
+                <img src="IMG_7216.JPG" alt="Image indisponible">
+                <p>Un CV est un résumé de vos compétences et de votre parcours professionnel qu'il faut fournir aux
+                    recruteurs lorsque vous répondez à une offre d'emploi...</p>
+                <br />
+                <a href="cv/cv.html">Lire la suite</a>
+            </section>
+            <section>
+                <h1>Pourquoi un Business plan pour votre entreprise ?</h1><br />
+                <img src="IMG_6537.WEBP" alt="Image indisponible">
+                <p>Le plan d'affaire, ou plan de developpement ou encore business plan, est un document officiel qui
+                    formalise par écrit les projections de développement d'une entreprise...</p>
+                <br />
+                <a href="bp/bp.html">Lire la suite</a>
+            </section>
+            <section>
+                <h1>Pourquoi un site web pour votre entreprise ?</h1><br />
+                <img src="IMG_6536.WEBP" alt="Image indisponible">
+                <p>Votre site internet est une source d'information sur votre société. Il...</p>
+                <br />
+                <a href="sw/sw.html">Lire la suite</a>
+            </section>
+
+            <section>
+                <h1>Quel est le rôle d'un Community manager pour votre entreprise?</h1><br />
+                <img src="IMG_6539.JPG" alt="Image indisponible">
+                <p>Le Community Manager est le representant de votre entreprise sur le WEB. Son rôle...</p>
+                <br />
+                <a href="#">Lire la suite</a>
+            </section>
+
+        </div>
+        <hr />
+
+
+        <div class="formulaire">
+            <h3>Nous laisser un message ?</h3>
+            <form action="/" method="post">
+
+                <p>Nom</p>
+                <input type="text" name="" id="">
+                <p>Email</p>
+                <input type="email" name="" id="" placeholder="  john@gmail.com" required="required">
+                <p>Téléphone</p>
+                <input type="tel" name="" id="" placeholder=" 0000-000-000-000">
+                <p>Message</p>
+                <textarea name="" id="" cols="30" rows="4" required="required"></textarea>
+            </form>
+            <button type="submit">Envoyer</button>
+
+
+        </div>
+    </div>
+
+    <div class="nos-services-page">
+        Nos services
+    </div>
+
+    <footer>
+        <div class="flex-footer">
+            <section id="sec-gauche">
+                <h2>Nos Services</h2>
+                <ul>
+                    <li><a href="#">Developpement des applications WEB</a></li>
+                    <li><a href="#">Developpement des applications mobiles</a></li>
+                    <li><a href="#">Developpement des applications de bureau</a></li>
+                    <li><a href="#">Creation des sites Web</a></li>
+                </ul>
+            </section>
+
+            <section id="sec-centre">
+                <h2>Autres Services</h2>
+                <ul>
+                    <li><a href="#">Montage des Business Model</a></li>
+                    <li><a href="#">Formation en Bureautique</a></li>
+                    <li><a href="#">Community Management</a></li>
+                    <li><a href="#">Montage de CV professionnel</a></li>
+                </ul>
+            </section>
+
+
+            <section id="sec-droite">
+                <h2>Contact rapide </h2>
+                <div id="call-div">
+                    <img src="Contact-logo/Appel.PNG" alt="">
+                    <ul>
+                        <li>+ 237 672-279-946</li>
+                        <li>+ 237 692-439-451</li>
+                        <li>+ 237 680-354-094</li>
+                    </ul>
+                </div>
+                <hr>
+                <div id="contact-logo">
+                    <a href="https://web.facebook.com/profile.php?id=100090063067357"><img src="Contact-logo/IMG_8107.PNG" alt=""></a>
+                    <a href="#"><img src="Contact-logo/IMG_8108.PNG" alt=""></a>
+                    <a href="#"><img src="Contact-logo/Instagram.PNG" alt=""></a>
+                    <a href="#"><img src="Contact-logo/IMG_8111.PNG" alt=""></a>
+                    <a href="#"><img src="Contact-logo/Linkedln.PNG" alt=""></a>
+
+                </div>
+
+            </section>
+        </div>
+
+        <p id="copyright">&copy;Powered by IT Servcive 2023 -all right reserved;</p>
+    </footer>
+
+</body>
+
+</html>

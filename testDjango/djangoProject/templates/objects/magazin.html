@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% load myfilter %}
+
+{% block content %}
+{% include "searchSection.html" %}
+
+<div class="magazin-page">
+
+<section class="magazin-left-side-menu">
+
+<h3>Eléments perdus et retrouvés</h3>
+<ul>
+{% for element in types.particular %}
+<p>{{element.rubrique}}</p>
+{% if element.type == "Tous" %}
+
+<li class="{{ 'Tous'|filter_selected:selected_type }}"><a href="/getObjectByCategorie/R/{{ element.type }}">{{ element.type }}</a><h6>{{ element.countP|add:element.countR }}</h6></li>
+{% else %}
+{% if element.type == "Aujourd'hui" %}
+<li class="{{ element.type|filter_selected:selected_type }}"><a href="/magazin/noType/R/{{ element.type }}/1">{{ element.type }}</a><h6>{{ element.countP|add:element.countR }}</h6></li>
+  
+{% else %}
+<li class="{{ element.type|filter_selected:selected_type }}"><a href="/magazin/{{ element.type }}/R/Aucune/1">{{ element.type }}</a><h6>{{ element.countP|add:element.countR }}</h6></li>
+  
+{% endif %}
+
+  
+{% endif %}
+
+{% endfor %}
+</ul>
+
+<h3>Documents officiels & pièces personnelles</h3>
+<ul>
+{% for element in types.principal %}
+<li class="{{ element.type|filter_selected:selected_type }}"><a href="/magazin/{{ element.type }}/R/Aucune/1">{{ element.type }}</a><h6>{{ element.countP|add:element.countR }}</h6></li>
+{% endfor %}
+</ul>
+
+<h3>Classement par region</h3>
+<ul>
+{% for element in types.region %}
+<li class="{{ element.type|filter_selected:selected_type }}"><a href="/magazin/noType/R/{{ element.type }}/1">{{ element.type }}</a><h6>{{ element.countP|add:element.countR }}</h6></li>
+{% endfor %}
+</ul>
+
+<h3>Autres categories</h3>
+<ul>
+{% for element in types.other %}
+<!-- <li><a>{{ element.otherType }}</a></li> -->
+<li type="" class="{{ element.otherType|filter_selected:selected_type }}"><a href="/magazin/{{ element.otherType }}/R/Aucune/1">{{ element.otherType }}</a><h6>{{ element.countP|add:element.countR }}</h6></li>
+
+{% endfor %}
+</ul>
+
+</section>
+{% block magazinContent %}
+  
+{% endblock magazinContent %}
+
+
+
+</div>
+
+{% endblock %}
+

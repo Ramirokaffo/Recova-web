@@ -1,0 +1,72 @@
+{% extends "objects/magazin.html" %}
+
+{% block magazinContent %}
+
+
+<section class="magazin-content">
+
+    {% if SELECTED_CATEGORY == 'R' %}
+    <div class="object-filter">
+        <a id="selected-filter" href="">Éléments retrouvés</a>
+        <a href="{{ INVERSE_URL }}">Éléments perdus</a>
+    </div>
+    {% else %}
+    {% if SELECTED_CATEGORY == 'P' %}
+    <div class="object-filter">
+        <a href="{{ INVERSE_URL }}">Éléments retrouvés</a>
+        <a href="" id="selected-filter">Éléments perdus</a>
+    </div>
+
+    {% endif %}
+    {% endif %}
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Type</th>
+                <th>Nom</th>
+                <th>Lieu</th>
+                <th>Catégorie</th>
+                <th>Description</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for object in datas %}
+            <tr>
+                <td>
+                    <div><img src="{{ object.image }}" alt="Image indisponible">
+                </td>
+                </div>
+                {% if object.otherType is None %}
+                <td>{{ object.type }}</td>
+                {% else %}
+                <td>{{ object.otherType }}</td>
+                {% endif %}
+
+                <td>{{ object.objectName }}</td>
+                {% if object.categorie == 'R' %}
+                <td>{{ object.nowSide }}</td>
+                <td>Retrouvé</td>
+                {% else %}
+                <td>{{ object.loseSide }}</td>
+                <td>Perdu</td>
+                {% endif %}
+                <td>{{ object.objectDescription }}</td>
+                <td>{{ object.createAt }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</section>
+<div class="object-page-count">
+    <a href="{{ PREV_URL }}">&lt;&lt; Prev</a>
+    <hr>
+    <a href="{{ NEXT_URL }}">Next &gt;&gt;</a>
+</div>
+
+{% endblock magazinContent %}

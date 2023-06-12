@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{% static 'site-ebs/jquery.min.js' %}"></script>
+    <script src="{% static 'site-ebs/script.js' %}"></script>
+    <title>Recova</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+<header>
+    {% block header %}
+    {% include "navbar.html" %}
+    {% endblock %}
+</header>
+
+
+    {% block content %}
+<h2>Home page</h2>
+    {% endblock %}
+<h2>
+    {% block h2 %}
+    {% endblock %}
+</h2>
+<ul>
+    {% block liste %}
+    {% endblock %}
+</ul>
+{% block footer %}
+  {% include "footer.html" %}
+{% endblock footer %}
+
+
+</body>
+</html>

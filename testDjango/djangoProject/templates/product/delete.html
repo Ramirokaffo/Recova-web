@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+    {% block content %}
+<h3> Voulez-vous vraiment supprimer le produt {{ name }}</h3>
+<!--<form method="post" enctype="multipart/form-data">-->
+<!--    {% csrf_token %}-->
+<!--        {{ form.as_p }}-->
+<!--    <button type="submit">Create</button>-->
+<!--</form>-->
+
+<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+<!--    {{ form.as_p }}-->
+<!--    <input type="text" name="name" id="name" placeholder="Entrez le nom du produit">-->
+<!--    <br>-->
+<!--    <input type="text" name="description" id="description" placeholder="Entrez la description">-->
+<!--    <br>-->
+<!--    <input type="number" name="price" id="price" placeholder="Entrez le prix">-->
+<!--    <br>-->
+<!--    <input type="file" name="image" id="image">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <input type="text" name="slug" id="slug" placeholder="Entrez le slug">-->
+<!--    <br>-->
+<!--    <br>-->
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+    <button class="btn btn-primary"><a href="{% url 'product' %}">Annuler</a></button>
+</form>
+
+    {% endblock %}

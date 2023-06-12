@@ -1,0 +1,637 @@
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*****************************************************
+                HEADER
+ ******************************************************/
+
+
+header {
+  position: relative;
+  background-color: transparent;
+    height: 400px;
+    /* border-bottom: 1px solid white; */
+    background-size: cover;
+    backdrop-filter: blur(32px);
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+
+header .logo img {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+}
+
+header h2 {
+    font-size: 12px;
+    color: maroon;
+    transition: font-size 1s;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    text-decoration: none;
+    margin-right: 1%;
+    /* line-height: 100px; */
+    display: none;
+}
+
+
+.slideshow {
+    /* position: relative;
+    width: 100%;
+    height: 400px; */
+    height: 380px;
+    width: 100%;
+    border-bottom-left-radius: 75%;
+    /* background-image: url("Background.jpg"); */
+    background-color: cyan;
+    /* background-size: cover; */
+    position: static;
+    border-bottom: 20px solid white;
+    overflow: hidden;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5);
+
+
+
+  }
+  
+  .slideshow img {
+    border-bottom-left-radius: 75%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: 380px;
+    border-bottom: 1px solid white;    
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    /* box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5); */
+  }
+  
+  .slideshow img.active {
+    opacity: 1;
+  }
+
+
+  header span {
+    text-align: center;
+    border-top-right-radius: 20px;
+    position: absolute;
+    padding: 3px;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+    width: 30%;
+    border-top: 1px solid cyan;
+    border-right: 1px solid cyan;
+  }
+  
+
+/*****************************************************
+                NAVIGATION
+ ******************************************************/
+
+
+nav {
+    height: 50px;
+    width: 100%;
+    text-align: right;
+    background-color: blue;
+    border-bottom: 1px solid cyan;
+    border-top: 1px solid cyan;
+    position: relative;
+
+}
+
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 25px;
+    font-weight: bold;
+
+}
+
+
+.nav-item {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+}
+
+
+nav input[type=checkbox],
+.nav-mobile {
+    display: none;
+}
+
+nav input[type=checkbox]:checked~ul {
+    display: block;
+    width: 100%;
+    z-index: 2;
+    top: 51px;
+    position: absolute;
+
+}
+
+
+#accueil, .active-item,
+.nav-item:hover {
+    font-size: 25px;
+    color: red;
+    /* border-top: 2px solid orange; */
+    border-bottom: 2px solid cyan;
+    transition: color 1s;
+
+}
+
+
+
+/*****************************************************
+                BODY
+ ******************************************************/
+
+ body {
+    background-image: url("bg/bg9.JPG");
+    background-size: 100%;
+    background-attachment: fixed;
+ }
+
+.divPrincipale {
+    /* filter: hue-rotate(20px) */
+}
+
+.divPrincipale section {
+    display: inline-table;
+    background-color: white;
+    width: 20%;
+    height: 500px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid blue;
+    margin: 50px;
+    text-align: justify;
+    transition: box-shadow 1s;
+
+}
+
+.divPrincipale section img {
+    display: block;
+    width: 100%;
+    height: 60%;
+    /* height: 300px; */
+    margin: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.divPrincipale section h1 {
+    text-align: center;
+    
+
+}
+
+
+.divPrincipale section img {
+    animation-name: zoomImage;
+    animation-duration: 2s;
+
+}
+
+.divPrincipale section a {
+    color: white;
+    font-size: medium;
+    background-color: purple;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-decoration: none;
+    line-height: 25px;
+    margin: auto;
+    width: 150px;
+    height: 25px;
+    display: block;
+    text-align: center;
+
+}
+
+@keyframes zoomImage {
+    from {width: 80%;}
+    to {width: 100%;}
+    
+}
+
+
+
+h2 {
+    text-decoration: underline;
+}
+
+
+.divPrincipale li:hover {
+    text-decoration: underline;
+}
+
+
+
+ol,
+ul {
+    line-height: 2;
+}
+
+.divPrincipale section:hover {
+    top: 5px;
+	left: 5px;
+	border: 5px solid cyan;
+	/* background-color: rgba(236, 149, 236, 1); */
+	/* transition: border 2s; */
+}
+
+.formulaire {
+    /* background-color: lightgray; */
+    background-color: rgba(38, 6, 247, 0.5);
+    border: 1px solid white;
+    /* display: block; */
+    margin: 5% 20%;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.formulaire h3 {
+    text-align: center;
+    margin: 20px 20px;
+    padding: auto;
+    color: white;
+}
+
+.formulaire form {
+    border: 1px solid white;
+    border-radius: 10px;
+
+    padding: 5%;
+    margin: 5% 5%;
+    color: cyan;
+    /* background-color: lightgray; */
+    /* background-color: rgba(6, 247, 247, 0.2); */
+
+}
+
+.formulaire form input{
+    display: block;
+    margin: 3px 20px;
+    width: 80%;
+    height: 30px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.formulaire form input, textarea {
+    display: block;
+    margin: 20px auto;
+    /* margin: auto; */
+    width: 60%;
+    border: 0px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.formulaire button {
+    display: block;
+font-weight: bold; 
+font-size: 18px;   
+    width: 50%;
+    margin: 20px auto;
+    /* margin: 20px 50px;
+    margin-top: 30px; */
+    width: 60%;
+    height: 30px;
+    color: white;
+    background-color: cyan;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    /* padding: auto; */
+}
+
+.formulaire button:hover {
+    background-color: purple;
+
+}
+
+
+
+
+/*****************************************************
+                FOOTER
+ ******************************************************/
+
+footer {
+    background-image: url("2.jpg");
+    background-size: 100%;
+    color: white;
+    line-height: 30px;
+    margin: auto;
+    padding: auto;
+    border-top: 10px solid white;
+}
+
+.flex-footer {
+    display: flex;
+    margin: 50px;
+}
+
+footer section {
+    flex: 3;
+    margin: 10px;
+    /* background-color: #fc01f5; */
+    /* height: 100px; */
+    display: inline-block;
+
+}
+
+footer section h2 {
+    text-decoration: none;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+footer section ul li a {
+    color: rgba(9, 249, 249, 0.8);
+    font-size: larger;
+}
+
+footer section ul li {
+    color: rgba(9, 249, 249, 0.8);
+    font-size: larger;
+    /* text-align: left; */
+
+}
+
+
+footer section p {
+    color: gray;
+}
+
+footer section a {
+    text-decoration: none;
+}
+
+
+/* footer #sec-gauche {
+    float: left;
+    margin-left: 4%;
+} */
+
+/* footer #sec-centre {
+    float: left;
+    margin-left: 10%;
+} */
+
+
+footer #sec-droite {
+    text-align: center;
+    flex: 2;
+}
+
+footer #sec-droite h2 {
+    text-align: center;
+}
+
+#sec-droite img {
+    flex: 1;
+    border-radius: 50%;
+    width: 30px;
+    height: 40px;
+    margin: 20px 15px;
+    background-color: transparent;
+}
+
+
+#contact-logo {
+    display: flex;
+}
+
+#call-div {
+    display: flex;
+}
+
+#call-div img {
+    margin-left: 80px;
+    margin-top: 40px;
+    width: 40px;
+    height: 50px;
+    background-color: transparent;
+
+}
+
+
+#call-div ul {
+    flex: 7;
+}
+
+
+
+
+
+footer #copyright {
+    text-align: center;
+    clear: both;
+    color: black;
+    background-color: white;
+
+}
+/*****************************************************
+                MEDIA QUERIE PHONE
+ ******************************************************/
+
+@media screen and (max-width: 901px) {
+
+    /* HEADER */
+
+    header h2 {
+        font-size: 8px;
+
+    }
+    
+
+    header h1 {
+        font-size: 20px;
+    }
+
+
+    header .logo img {
+        height: 50px;
+        width: 50px;
+    }
+
+    header span {
+        display: none;
+      }
+
+      header h2 {
+        display: block;
+    }
+    
+      
+    
+    /* NAVIGATION */
+
+    nav {
+        text-align: center;
+    }
+
+    .nav-mobile {
+        display: block;
+        font-size: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav li {
+        background-color: cyan;
+        /* background-color: #8b0149; */
+        width: 100%;
+        border-bottom: 1px solid black;
+        position: relative;
+        box-shadow: 5px 5px 10px black;
+    }
+
+    nav li:hover {
+        background-color: #fc01f5;
+        transition: background-color 2s;
+    }
+
+    #accueil,
+    nav li a:hover {
+        font-size: 18px;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    /* CONTENU */
+
+    .divPrincipale {
+        margin: auto;
+
+    }
+
+    .divPrincipale section {
+        width: 80%;
+        display: block;
+        /* text-align: justify; */
+        /* box-shadow: 10px 10px 15px purple; */
+        /* margin: auto; */
+        margin-top: 35px;
+        margin-bottom: 35px;
+
+    }
+
+    .formulaire {
+        margin: 5% 10%;
+    }
+    
+
+    /* FOOTER */
+
+    /* footer {
+        padding: 50px;
+    } */
+
+    footer section {
+        display: contents;
+        text-align: center;
+    
+    }
+    .flex-footer {
+        display: inline-block;
+        margin: 80px;
+    }
+    
+
+    /* footer #sec-droite {
+        margin-left: 10%;
+    } */
+
+    footer section h2 {
+        text-align: center;
+    
+    }
+    
+    
+
+
+}
+
+/*****************************************************
+                MEDIA QUERIE TABLETTE
+ ******************************************************/
+
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    header h1 {
+        font-size: 45px;
+    }
+
+    .divPrincipale section {
+        width: 30%;
+
+    }
+    
+
+}
+
+/*****************************************************
+                MEDIA QUERIE BUREAU
+ ******************************************************/
+
+@media screen and (min-width: 1201px) {
+    header h1 {
+        font-size: 45px;
+    }
+
+    /* nav ul {
+    display: block;
+    width: 100%;
+    z-index: 2;
+    top: 51px;
+    position: absolute; */
+
+}
+
+
+
+
+
+
+
+
+/* *******************************************************
+                        NOS SERVICES
+********************************************************* */
+
+.nos-services-page {
+    display: none;
+    height: 400px;
+
+}

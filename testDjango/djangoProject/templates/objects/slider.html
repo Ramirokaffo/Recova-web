@@ -1,0 +1,24 @@
+
+<section id="hero">]
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            {% for raw  in sliderdata %}
+              
+            <div class="carousel-item active" style='background-image: url({{ raw.image.url }});'>
+                <div class="carousel-container">
+                    <div class="carousel-content animate_animated animate_fadeInUp">
+                        <h2>{{ raw.title }}</h2>
+                        <p>{{ raw.description }}</p>
+                        <div class="text-center">
+                            <a href="" class="btn-get-started">Read more</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</section>
